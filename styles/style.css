@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(185, 41%, 84%);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+}
+
+
+.container{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 2rem;
+}
+
+/************ left side*********/
+.qstn{
+    padding: 1rem;
+    color: hsl(186, 14%, 43%);
+    font-size: 14px;
+}
+
+.qstn div {
+    margin: 1rem 0;
+    position: relative;
+}
+.qstn div input{
+  padding:0.5rem 1rem;
+  border: none;
+  position: relative;
+  background-color: hsl(189, 41%, 97%);
+  border-radius: 5px;
+  color: hsl(186, 14%, 43%);
+  width: 100%;
+}
+
+.people-no-text, .bill-text, .tip-text{
+    display: flex;
+    justify-content: space-between;
+}
+
+.people-no-error, .bill-error, .tip-error{
+    color: rgb(197, 100, 100);
+}
+
+.qstn div input:focus{
+    outline: none;
+    border: 2px solid hsl(172, 67%, 45%);
+}
+.error{
+    outline: 2px solid rgb(197, 100, 100);
+}
+
+.qstn div .icon{
+    position: absolute;
+}
+
+.qstn div .dollar{
+    top: 59.7%;
+    z-index: 1;
+    margin-left: 3px;
+}
+
+.qstn div .person{
+    top: 71.7%;
+    z-index: 1;
+    margin-left: 3px;
+}
+
+
+
+
+
+.buttons button:not(:last-child){
+    padding: 0.35rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    cursor: pointer;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.buttons button:not(:last-child):hover{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+
+.buttons button:not(:last-child):focus{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+
+.custom {
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.custom:focus{
+    border: 2px solid hsl(172, 67%, 45%);
+    background-color: white;
+}
+
+/************ right side***********/
+
+.rightside{
+    background-color: hsl(183, 100%, 15%);
+    padding: 1rem;
+    border-radius: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tipanswer, .total{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tipanswer div, .total div{
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+}
+
+.answers div span{
+    color: hsl(186, 14%, 43%);
+    font-size: 12px;
+}
+
+.tip-amount, .total-amount{
+    font-size: 34px;
+    color:   hsl(172, 67%, 45%);
+    margin-left: 0.5rem;
+}
+
+.reset{
+    background-color:  hsl(183, 100%, 21%);
+    border: none;
+    color: hsl(183, 100%, 15%);
+    border-radius: 5px;
+    padding: 0.5rem;
+    text-transform: uppercase;
+}
+
+.reset:hover{
+    background-color: hsl(172, 67%, 45%);
+    cursor: pointer;
+}
+
+
+
+
+/****************** media quiereis****************/
+
+@media screen and (max-width:500px) {
+    .container{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr;
+        margin: 0;
+        width: 100vw;
+        height: 85vh;
+    }
+
+    .qstn div .dollar{
+        top: 60.4%;
+        z-index: 1;
+        margin-left: 3px;
+    }
+
+    .qstn div .person{
+        top: 56.5%;
+        z-index: 1;
+        margin-left: 3px;
+    }
+
+}
+
